@@ -1,0 +1,27 @@
+[package]
+name = "firecalendar"
+version = "0.1.0"
+edition = "2021"
+authors = ["Firefly Labs"]
+license = "MIT"
+repository = "https://github.com/fireflylabs/firecalendar"
+description = "Calendar CLI with events, reminders, and TUI"
+
+[[bin]]
+name = "firecalendar"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+anyhow = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+colored = "2.1"
+uuid = { version = "1.0", features = ["v4", "serde"] }
+dirs = "5.0"
+thiserror = "1.0"
+ratatui = "0.26"
+crossterm = "0.27"
+notify-rust = "4.10"
+atty = "0.2"
